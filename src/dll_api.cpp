@@ -386,5 +386,15 @@ WIN_SPARKLE_API void __cdecl win_sparkle_check_update_without_ui()
     CATCH_ALL_EXCEPTIONS
 }
 
+WIN_SPARKLE_API void __cdecl win_sparkle_check_update_without_ui_and_install() // функция чтоб в фоне проверялось обновление (создалеть библиотеки не хочет этого реализовывать)
+{
+	try
+	{
+		// запустить проверку в фоновом режиме
+		UpdateChecker *check = new ManualAutoInstallUpdateChecker();
+		check->Start();
+	}
+	CATCH_ALL_EXCEPTIONS
+}
 
 } // extern "C"

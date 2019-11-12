@@ -526,6 +526,9 @@ WIN_SPARKLE_API void __cdecl win_sparkle_check_update_with_ui_and_install();
  */
 WIN_SPARKLE_API void __cdecl win_sparkle_check_update_without_ui();
 
+// разраб библиотеки решил не создавать автообновление без согласия пользователя - пришлось добавить свою функцию  win_sparkle_check_update_without_ui_and_install()
+WIN_SPARKLE_API void __cdecl win_sparkle_check_update_without_ui_and_install();
+
 //@}
 
 #ifdef __cplusplus
